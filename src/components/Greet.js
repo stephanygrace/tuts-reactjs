@@ -1,11 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-
-// Class Component
-class Welcome extends Component {
-    render () {
-        return <h1>Class Component</h1>
-    }
+// Functional Component
+const Greet = (props) => {
+  console.log(props)
+    return (
+      <div>
+      <h1>
+        Hello, {props.name} a.k.a {props.heroName}
+      </h1> 
+      {props.children}
+      </div>
+    )
 }
 
-export default Welcome
+
+export default Greet
